@@ -7,8 +7,18 @@ inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 Layout/SpaceInsideArrayLiteralBrackets:
   Enabled: false
 
-FrozenStringLiteralComment:
-  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  Exclude:
+    - 'db/schema.rb'
+
+#Layout/LineLength:
+#  Max: 128
+#  Exclude:
+#    - "db/migrate/*.rb"
+#    - "spec/**/*"
 
 Style/StringLiterals:
   EnforcedStyle: single_quotes
+  Exclude:
+    - 'db/schema.rb'

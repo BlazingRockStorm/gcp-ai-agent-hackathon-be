@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show update destroy ]
+  allow_unauthenticated_access only: %i[ index show ]
 
   # GET /posts
   def index
